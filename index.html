@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="fr" class="scroll-smooth"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Lacreuse Conseil | Planification Financière&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&amp;display=swap');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Plus Jakarta Sans', sans-serif;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1d1d1f;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-x: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-font-smoothing: antialiased;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>nav {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(20px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-backdrop-filter: blur(20px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(255, 255, 255, 0.75);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.4s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>#loader {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: fixed; inset: 0; background: #000; display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center; align-items: center; z-index: 10000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: slideUp 1s cubic-bezier(0.85, 0, 0.15, 1) forwards;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation-delay: 1.5s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes slideUp { to { transform: translateY(-100%); visibility: hidden; } }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.reveal.active { opacity: 1; transform: translateY(0); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hover-card {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 32px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hover-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 30px 60px rgba(0,0,0,0.08); background-color: #ffffff; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.zoom-container { overflow: hidden; border-radius: inherit; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.zoom-element { transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hover-card:hover .zoom-element { transform: scale(1.15); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.details-content { max-height: 0; transition: max-height 0.6s ease-out; opacity: 0; overflow: hidden; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.expertise-card.open .details-content { max-height: 500px; opacity: 1; margin-top: 1.5rem; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.gold-text { color: #c5a358; }</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.apple-btn {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #000; color: #fff; padding: 16px 32px; border-radius: 980px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: inline-flex; items-center; gap: 10px; text-decoration: none; border: none; cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.apple-btn:hover { background: #333; transform: scale(1.05); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.reveal-text { color: rgba(29, 29, 31, 0.15); transition: color 0.15s linear; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.reveal-text.active { color: rgba(29, 29, 31, 1); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.process-container { position: relative; padding: 20px 0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.process-line {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute; top: 60px; left: 12%; right: 12%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 1px; background: #f0f0f2; z-index: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.step-icon-box {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 80px; height: 80px; background: #fff; border: 1px solid #f0f0f2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 24px; display: flex; align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5rem; color: #000; margin: 0 auto 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative; z-index: 2; transition: all 0.5s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hover-card:hover .step-icon-box { border-color: #c5a358; color: #c5a358; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.process-line { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.step-icon-box { width: 60px; height: 60px; font-size: 1.2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="loader"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="loader-text" style="color:#fff; font-size: clamp(2rem, 8vw, 4rem); font-weight: 200; letter-spacing: 0.5em; text-transform: uppercase; text-align: center; width: 100%;"&gt;Lacreuse &lt;span class="gold-text font-bold"&gt;Conseil&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="fixed w-full z-50 border-b border-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="font-bold tracking-tight text-xl"&gt;Lacreuse &lt;span class="gold-text"&gt;Conseil&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center gap-4 md:gap-10 text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#expertise" class="hidden md:block hover:text-black transition"&gt;Expertises&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#approche" class="hidden md:block hover:text-black transition"&gt;Approche&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#contact" class="hidden md:block hover:text-black transition"&gt;Contact&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#carriere" class="hidden md:block hover:text-black transition"&gt;Carrière&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="https://outlook.office.com/bookwithme/user/a7f79af1bdc64ebea32aee344d37cb75@swisslife-select.ch?anonymous&amp;ismsaljsauthenabled&amp;ep=plink" target="_blank" class="apple-btn text-white !py-2.5 !px-6 !gap-2 text-[12px] normal-case tracking-normal"&gt;Prendre RDV&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="min-h-[80vh] flex items-center justify-center pt-28 px-6 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-5xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="reveal text-[11px] md:text-[13px] font-bold tracking-[0.3em] md:tracking-[0.5em] uppercase mb-6 gold-text"&gt;Stratégie Patrimoniale&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="reveal text-4xl md:text-[80px] font-bold tracking-tighter leading-[1.1] md:leading-[0.95] mb-8"&gt;L'intelligence &lt;br&gt;&lt;span class="text-gray-400"&gt;du patrimoine.&lt;/span&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="reveal text-lg md:text-2xl text-gray-500 font-light max-w-2xl mx-auto leading-relaxed mb-10 px-4"&gt;Je conçois des stratégies sur mesure pour structurer et valoriser vos actifs dans le temps.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="reveal"&gt;&lt;a href="#contact" class="apple-btn"&gt;Lancer la conversation&lt;/a&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="py-12 md:py-16 bg-white border-y border-gray-50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-4xl mx-auto px-6 flex justify-around text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-3xl md:text-5xl font-extrabold gold-text mb-2"&gt;+7&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400"&gt;Ans d'expertise&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-3xl md:text-5xl font-extrabold gold-text mb-2"&gt;+200&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400"&gt;Clients accompagnés&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="expertise" class="py-16 md:py-20 px-6 max-w-7xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="reveal text-4xl md:text-6xl font-bold tracking-tight mb-12 md:mb-16 text-center"&gt;Ma vision à 360°.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-left"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="expertise-card hover-card p-8 md:p-10 bg-[#f5f5f7] reveal cursor-pointer" onclick="this.classList.toggle('open')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="zoom-container w-fit"&gt;&lt;i class="fas fa-chart-line text-3xl md:text-4xl gold-text mb-6 zoom-element"&gt;&lt;/i&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl md:text-3xl font-bold mb-4 tracking-tight"&gt;Investissement&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-500 text-base md:text-lg"&gt;Optimisation rigoureuse de votre capital pour générer une performance durable.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="details-content border-t border-gray-200 pt-6 italic text-lg md:text-xl text-gray-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"Je considère essentiel de faire travailler votre capital afin qu’il dépasse l’inflation. À long terme, l’indexation est le principal risque ; je fais de votre épargne un véritable moteur de croissance."</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="expertise-card hover-card p-8 md:p-10 bg-[#f5f5f7] reveal cursor-pointer" onclick="this.classList.toggle('open')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="zoom-container w-fit"&gt;&lt;i class="fas fa-fingerprint text-3xl md:text-4xl gold-text mb-6 zoom-element"&gt;&lt;/i&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl md:text-3xl font-bold mb-4 tracking-tight"&gt;Fiscalité&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-500 text-base md:text-lg"&gt;Analyse approfondie pour réduire vos charges fiscales intelligemment.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="details-content border-t border-gray-200 pt-6 italic text-lg md:text-xl text-gray-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"La fiscalité structure la performance réelle de votre stratégie. J’en anticipe les impacts et j’en optimise les mécanismes dans une vision globale."</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="expertise-card hover-card p-8 md:p-10 bg-[#f5f5f7] reveal cursor-pointer" onclick="this.classList.toggle('open')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="zoom-container w-fit"&gt;&lt;i class="fas fa-landmark text-3xl md:text-4xl gold-text mb-6 zoom-element"&gt;&lt;/i&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl md:text-3xl font-bold mb-4 tracking-tight"&gt;Immobilier&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-500 text-base md:text-lg"&gt;Accompagnement stratégique pour devenir propriétaire et structurer votre financement.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="details-content border-t border-gray-200 pt-6 italic text-lg md:text-xl text-gray-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"L’immobilier est un élément clé de votre stratégie globale. J’en assure l’investissement et le financement hypothécaire avec une approche structurée et durable."</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="expertise-card hover-card p-8 md:p-10 bg-[#f5f5f7] reveal cursor-pointer" onclick="this.classList.toggle('open')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="zoom-container w-fit"&gt;&lt;i class="fas fa-shield-halved text-3xl md:text-4xl gold-text mb-6 zoom-element"&gt;&lt;/i&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl md:text-3xl font-bold mb-4 tracking-tight"&gt;Prévoyance&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-500 text-base md:text-lg"&gt;Sécurisation de votre niveau de vie et protection de votre famille face aux aléas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="details-content border-t border-gray-200 pt-6 italic text-lg md:text-xl text-gray-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"La prévoyance est le socle de toute stratégie. Je structure des solutions adaptées pour protéger votre capital, vos actifs et vos projets dans la durée."</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="expertise-card hover-card p-8 md:p-10 bg-[#f5f5f7] reveal cursor-pointer" onclick="this.classList.toggle('open')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="zoom-container w-fit"&gt;&lt;i class="fas fa-magnifying-glass-dollar text-3xl md:text-4xl gold-text mb-6 zoom-element"&gt;&lt;/i&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl md:text-3xl font-bold mb-4 tracking-tight"&gt;Recherche d'avoirs&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-500 text-base md:text-lg"&gt;Identification et récupération de vos avoirs de libre-passage oubliés.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="details-content border-t border-gray-200 pt-6 italic text-lg md:text-xl text-gray-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"Plusieurs milliards de francs dorment sur des comptes non réclamés. Je vous aide à retrouver et consolider votre capital retraite."</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="expertise-card hover-card p-8 md:p-10 bg-[#f5f5f7] reveal cursor-pointer" onclick="this.classList.toggle('open')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="zoom-container w-fit"&gt;&lt;i class="fas fa-file-shield text-3xl md:text-4xl gold-text mb-6 zoom-element"&gt;&lt;/i&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl md:text-3xl font-bold mb-4 tracking-tight"&gt;Assurances&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-500 text-base md:text-lg"&gt;Examen complet de vos couvertures pour sécuriser votre avenir durablement.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="details-content border-t border-gray-200 pt-6 italic text-lg md:text-xl text-gray-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"L'assurance ne doit pas être une charge mais une sécurité. J'en assure l'optimisation pour qu'elle serve réellement vos intérêts."</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact" class="py-8 md:py-12 bg-white text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-5xl mx-auto px-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="hover-card bg-[#f5f5f7] p-10 md:p-20 rounded-[32px] md:rounded-[48px] w-full reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-3xl md:text-6xl font-bold mb-6 md:mb-8 tracking-tight"&gt;Planifier une analyse financière.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-400 text-lg md:text-2xl mb-8 md:mb-12 font-light"&gt;Première analyse stratégique offerte.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="https://outlook.office.com/bookwithme/user/a7f79af1bdc64ebea32aee344d37cb75@swisslife-select.ch?anonymous&amp;ismsaljsauthenabled&amp;ep=plink" target="_blank" class="apple-btn text-base md:text-xl py-4 md:py-6 px-8 md:px-12 w-full md:w-auto"&gt;Réserver un créneau&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="py-16 md:py-20 bg-[#f5f5f7]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10 md:gap-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="w-full md:w-1/2 reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="zoom-container rounded-[32px] md:rounded-[48px] shadow-xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="portrait-maxime.jpg" alt="Maxime Lacreuse" class="w-full grayscale zoom-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="w-full md:w-1/2 text-left reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight"&gt;Maxime Lacreuse&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="gold-text font-bold tracking-[0.1em] mb-6 uppercase text-[11px] md:text-[13px]"&gt;Chef de groupe &lt;span class="mx-2 text-gray-300"&gt;|&lt;/span&gt; Planificateur financier diplômé IAF&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xl md:text-2xl text-black font-semibold leading-tight"&gt;Expertise et rigueur au service de vos décisions financières.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="mission-text" class="text-lg md:text-xl font-light leading-relaxed italic"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="reveal-text"&gt;"Ma&lt;/span&gt; &lt;span class="reveal-text"&gt;mission&lt;/span&gt; &lt;span class="reveal-text"&gt;est&lt;/span&gt; &lt;span class="reveal-text"&gt;d’accompagner&lt;/span&gt; &lt;span class="reveal-text"&gt;mes&lt;/span&gt; &lt;span class="reveal-text"&gt;clients&lt;/span&gt; &lt;span class="reveal-text"&gt;pour&lt;/span&gt; &lt;span class="reveal-text"&gt;structurer&lt;/span&gt; &lt;span class="reveal-text"&gt;et&lt;/span&gt; &lt;span class="reveal-text"&gt;valoriser&lt;/span&gt; &lt;span class="reveal-text"&gt;leur&lt;/span&gt; &lt;span class="reveal-text"&gt;capital.&lt;/span&gt; &lt;span class="reveal-text"&gt;Je&lt;/span&gt; &lt;span class="reveal-text"&gt;conçois&lt;/span&gt; &lt;span class="reveal-text"&gt;des&lt;/span&gt; &lt;span class="reveal-text"&gt;stratégies&lt;/span&gt; &lt;span class="reveal-text"&gt;sur&lt;/span&gt; &lt;span class="reveal-text"&gt;mesure,&lt;/span&gt; &lt;span class="reveal-text"&gt;intégrant&lt;/span&gt; &lt;span class="reveal-text"&gt;investissements,&lt;/span&gt; &lt;span class="reveal-text"&gt;immobilier,&lt;/span&gt; &lt;span class="reveal-text"&gt;assurance&lt;/span&gt; &lt;span class="reveal-text"&gt;et&lt;/span&gt; &lt;span class="reveal-text"&gt;fiscalité,&lt;/span&gt; &lt;span class="reveal-text"&gt;afin&lt;/span&gt; &lt;span class="reveal-text"&gt;de&lt;/span&gt; &lt;span class="reveal-text"&gt;transformer&lt;/span&gt; &lt;span class="reveal-text"&gt;votre&lt;/span&gt; &lt;span class="reveal-text"&gt;épargne&lt;/span&gt; &lt;span class="reveal-text"&gt;en&lt;/span&gt; &lt;span class="reveal-text"&gt;un&lt;/span&gt; &lt;span class="reveal-text"&gt;levier&lt;/span&gt; &lt;span class="reveal-text"&gt;de&lt;/span&gt; &lt;span class="reveal-text"&gt;croissance&lt;/span&gt; &lt;span class="reveal-text"&gt;solide&lt;/span&gt; &lt;span class="reveal-text"&gt;et&lt;/span&gt; &lt;span class="reveal-text"&gt;durable,&lt;/span&gt; &lt;span class="reveal-text"&gt;tout&lt;/span&gt; &lt;span class="reveal-text"&gt;en&lt;/span&gt; &lt;span class="reveal-text"&gt;sécurisant&lt;/span&gt; &lt;span class="reveal-text"&gt;vos&lt;/span&gt; &lt;span class="reveal-text"&gt;choix&lt;/span&gt; &lt;span class="reveal-text"&gt;à&lt;/span&gt; &lt;span class="reveal-text"&gt;chaque&lt;/span&gt; &lt;span class="reveal-text"&gt;étape."&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="pt-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="inline-block border-l-2 border-[#c5a358] pl-6 text-gray-400 text-[10px] md:text-sm uppercase tracking-[0.3em] font-medium"&gt;Exigence • Transparence • Performance&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="py-16 md:py-24 bg-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-5xl mx-auto px-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-[#f5f5f7] rounded-[32px] md:rounded-[48px] p-10 md:p-20 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="reveal text-3xl md:text-5xl font-bold text-black mb-6 tracking-tight"&gt;Guide de la finance en Suisse.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="reveal text-gray-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light"&gt;Les 6 leviers pour maximiser votre patrimoine en Suisse.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="reveal flex justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="apple-btn" onclick="alert('Bientôt disponible !');"&gt;Obtenir mon ebook gratuitement&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="approche" class="py-16 md:py-20 bg-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-6xl mx-auto px-6 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="reveal text-3xl md:text-6xl font-bold tracking-tight mb-12 md:mb-20"&gt;Un processus rigoureux.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="process-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="process-line"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="hover-card p-4 md:p-6 reveal text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="step-icon-box"&gt;&lt;i class="fa-solid fa-magnifying-glass-chart zoom-element"&gt;&lt;/i&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-lg md:text-xl font-bold mb-2"&gt;Analyse&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-gray-400 text-[11px] md:text-sm"&gt;Analyse complète de votre situation actuelle.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="hover-card p-4 md:p-6 reveal text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="step-icon-box"&gt;&lt;i class="fa-solid fa-file-invoice-dollar zoom-element"&gt;&lt;/i&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-lg md:text-xl font-bold mb-2"&gt;Préparation&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-gray-400 text-[11px] md:text-sm"&gt;Sélection des meilleures offres du marché.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="hover-card p-4 md:p-6 reveal text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="step-icon-box"&gt;&lt;i class="fa-solid fa-handshake zoom-element"&gt;&lt;/i&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-lg md:text-xl font-bold mb-2"&gt;Conseil&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-gray-400 text-[11px] md:text-sm"&gt;Mise en place de votre stratégie personnalisée.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="hover-card p-4 md:p-6 reveal text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="step-icon-box"&gt;&lt;i class="fa-solid fa-chart-line zoom-element"&gt;&lt;/i&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-lg md:text-xl font-bold mb-2"&gt;Suivi&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-gray-400 text-[11px] md:text-sm"&gt;Accompagnement assuré sur le long terme.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="carriere" class="py-8 md:py-12 bg-white text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-5xl mx-auto px-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="hover-card bg-[#f5f5f7] p-10 md:p-20 rounded-[32px] md:rounded-[48px] w-full reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-3xl md:text-6xl font-bold mb-6 md:mb-8 tracking-tight"&gt;Rejoignez mon équipe.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-400 text-lg md:text-2xl mb-8 md:mb-12 font-light"&gt;Je recherche des personnalités ambitieuses.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="https://outlook.office.com/bookwithme/user/a7f79af1bdc64ebea32aee344d37cb75@swisslife-select.ch?anonymous&amp;ismsaljsauthenabled&amp;ep=plink" target="_blank" class="apple-btn text-base md:text-xl py-4 md:py-6 px-8 md:px-12 w-full md:w-auto"&gt;Appel découverte&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="py-12 md:py-16 text-center text-gray-400 text-[8px] md:text-[10px] tracking-[0.3em] uppercase border-t border-gray-100 px-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&amp;copy; 2025 Lacreuse Finance.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const observer = new IntersectionObserver((entries) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>entries.forEach(entry =&gt; { if (entry.isIntersecting) entry.target.classList.add('active'); });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}, { threshold: 0.1 });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('.reveal').forEach(el =&gt; observer.observe(el));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.addEventListener('scroll', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const spans = document.querySelectorAll('.reveal-text');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const triggerBottom = window.innerHeight / 1.3;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>spans.forEach(span =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const spanTop = span.getBoundingClientRect().top;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if(spanTop &lt; triggerBottom) { span.classList.add('active'); }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>else { span.classList.remove('active'); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
